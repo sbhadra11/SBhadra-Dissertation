@@ -88,6 +88,8 @@
 \usepackage{gensymb}
 \usepackage{array}
 \setlength\extrarowheight{4pt} 
+\usepackage{upgreek}
+
 
 %set parameters for longtable:
 % default caption width is 4in for longtable, but wider for normal tables
@@ -190,6 +192,27 @@
 
 \newcommand{\specialcell}[2][c]{%
   \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+  
+\newcommand{\repeatcaption}[2]{%
+  \renewcommand{\thefigure}{\ref{#1}}%
+  \captionsetup{list=no}%
+  \caption{#2 (repeated from page \pageref{#1})}%
+}
+
+
+\newcommand{\repeatcaptiont}[2]{%
+  \renewcommand{\thetable}{\ref{#1}}%
+  \captionsetup{list=no}%
+  \caption{#2 (repeated from page \pageref{#1})}%
+}
+
+\newcommand{\angstrom}{\textup{\AA}}
+
+\newcommand{\figskip}[1]{
+\begin{minipage}{\textwidth}
+\centering(\textit{Figure~\ref{#1} follows on the next page.})
+\end{minipage}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
@@ -258,8 +281,7 @@
 \include{ch6-conclusion/chapter-conclusion}
 \appendix % all chapters following will be labeled as appendices
 \include{ch-appendices/eis}
-\include{ch-appendices/otherchem}
-\include{ch-appendices/comp}
+\include{ch-appendices/fulldata}
 
 
 % Make the bibliography single spaced

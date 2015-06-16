@@ -1,2 +1,67 @@
 \section{Experimental methods}
 \label{sec:bw:exp}
+
+\subsection{Computational}
+
+A standard 1D acoustic conservation law model was used to explore
+the effect of density and modulus on the echoing behavior of an
+ultrasonic pulse, based on the mismatch in sound speed between adjacent
+layers within a battery. The speed of sound, \emph{c}, in a solid
+material can be calculated from the Newton-Laplace equation:
+
+\begin{equation}
+c= \sqrt{\frac{B}{\rho}}
+\label{eq:newtonlaplace}
+\end{equation}
+
+\noindent where \emph{B} is the bulk modulus, and \emph{$\rho$} is the density. The
+Conservation Laws Package (Clawpack)~\cite{LeVeque_undated-pw} with the
+Riemann acoustics solver was used to simulate a full battery stack (Fig.~\ref{fig:bwschem}a) using python (via pyclaw). In one dimension, the governing
+continuity equations are:
+
+\begin{equation}
+    p_t = E \cdot u_x = 0
+    \label{eq:cont1}
+\end{equation}
+
+\begin{equation}
+    u_t + \frac{1}{\rho} \cdot p_x = 0
+    \label{eq:cont2}
+\end{equation}
+
+where \emph{p} is the pressure, \emph{u} is the wave velocity, and the
+subscripts \emph{x} and \emph{t} imply spatial and temporal variation,
+respectively. Values for the densities and elastic moduli of the
+electrode components were assembled from the references in Table~\ref{tab:bwtab1}; the
+densities for \ce{LiCoO_2} and graphite are listed as a
+function of Li content.
+
+\begin{table}[htb]
+\centering
+ \caption{\label{tab:bwtab1}Densities and elastic moduli of electrode components for acoustic simulation.}
+  \begin{tabular}{p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}}
+    \hline
+    Material & Density (g/cm$^3$) & Bulk modulus (GPa) & Reference\\
+    \hline
+        \ce{LiCoO2} & 4.80--5.15 & 168.0 & \cite{Reimers1992-ql}\\
+        Graphite & 2.26--2.50 & 27.6 & \cite{Koyama2006-hm}\\
+        Al & 2.70 & 69.0 & \cite{linden}\\
+        Cu & 8.96 & 117.0 & \cite{linden}\\
+        PVDF & 1.80 & 2.0 & \cite{linden}\\
+        Carbon black & 1.90 & 25.0 (est.) & \cite{linden}\\
+  \end{tabular}
+\end{table}
+
+In modeling the electrodes (assuming 80\% active material, 10\% conductive additive, 10\% binder), to a first approximation the effective densities of the composite anode and cathode can be estimated from a mass-fraction weighted sum of the densities of the individual components. Similarly, the effective moduli of the anode and cathode layers can be estimated from a volume-fraction weighted sum of the component moduli. Additionally, a composite can be considered ultrasonically homogeneous if the particles are much smaller than the acoustic wavelength, which has been confirmed by both experimental and theoretical evidence.~\cite{Schulitz1998-bq} For the sake of simplicity, all of these assumptions were used in our simulations. Future work could involve more  complex models of granular materials, such as the Kelvin-Voight relationship. This is a non-trivial exercise, as the modeling of acoustic impedance and attenuation in packed-particle beds is still an active area of research within the acoustic community, with many questions posed decades ago still unanswered.~\cite{Challis2005-vw, McClements1991-dj} This said, our current model captures a qualitatively meaningful relationship between state of charge and acoustic behavior.
+
+Changes in the states of charge and lithium content in each electrode during cycling were determined via a Dualfoil simulation.~\cite{Albertus2007-eu} The lithium content for each time step was extracted from the Dualfoil output file and was then used to estimate the density changes in each electrode based on values from studies by Reimers and Dahn.~\cite{Reimers1992-ql} The changes in density were then fed into Clawpack to simulate the resulting change in acoustic behavior as a function of state of charge. As a first approximation, the modulus was held constant; however, in future studies it may be possible to determine elastic modulus from the acoustic measurements.
+
+The Dualfoil input files were not modified from the standard li-ion.in input files created with the package. Within Python, using the pyclaw library, the input file from the Dualfoil simulation was used to define the geometry of the cell, and extra layers representing current collectors and external packaging were added.
+
+\subsection{Experimental}
+
+Electrochemical-acoustic time of flight experiments were performed on a \ce{LiCoO2}/graphite pouch cell, a cylindrical \ce{Li(NiCoAl)O2}/graphite 18650 cell, and Zn/\ce{MnO2} alkaline AA cells. \ce{LiCoO2} pouch cells were obtained in a preformed state from the Arnold lab at Princeton University. Cells had a nominal capacity of 160 mAh and a nominal voltage of 3.7 V. Panasonic NCR18650B \ce{Li(NiCoAl)O2} cells were obtained from a distributor, with a nominal capacity of 3400 mAh and a nominal voltage of 3.7 V. Both Duracell and CVS brand Alkaline cells were purchased, with nominal capacities of 2850 mAh and nominal voltages of 1.5 V.
+
+An Olympus EPOCH 600 ultrasonic pulser-receiver was used with two 2.25 MHz transducers: one in pulse-echo (reflection) mode and the other in transmission mode. This allowed the measurement of reflected and transmitted signals through the cell. A small amount of glycerin was used to ensure a reliable acoustic interface between the transducers and the cell, and the transducers were held in place with light pressure using a custom-designed 3D printed holder, printed using a Formlabs Form1+ 3D printer. The holders fit the batteries snugly, with cutouts for ultrasonic transducer placement. This allowed for easily repeatable experiments. Transducers were held in place using a 3D printed clip that applied light pressure and held the transducers perpendicular to the battery surface.. No modifications were made to the cells. Custom Python software was written to control the EPOCH through Pithy.~\cite{Steingart_undated-rr} The applied pulse was 445 ns long and its transmission/echo behavior was measured out to 20 µs; measurements were taken every 30 seconds.
+	
+To test the cells electrochemically, galvanostatic cycling protocols were used with a Neware BTS-3000 cycler. For the LiCoO2/graphite and Li(NiCoAl)O2/graphite cells, a C/2.5 cycling rate was used, with 30 m rest in between each charge and discharge step. For the alkaline AA cells, single discharge steps at C/20, C/10, and C/5 rates were used. The Neware was time-synchronized with the EPOCH, and all data analysis was performed with Python.

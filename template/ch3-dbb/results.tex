@@ -87,6 +87,7 @@ Removing the case decreased the overall coefficient of restitution. Table~\ref{t
 
 \begin{table}[htb]
 \centering
+ \caption{\label{tab:cortable}Water content effect on coefficient of restitution.}
   \begin{tabular}{p{2.5cm}p{2.5cm}p{2.5cm}p{2.5cm}}
     \hline
     & Coefficient of restitution at 100\% SOC & Coefficient of restitution at 50\% SOC & Coefficient of restitution at 0\% SOC\\
@@ -95,7 +96,6 @@ Removing the case decreased the overall coefficient of restitution. Table~\ref{t
         Dehydrated & 0.10 $\pm$ 0.05 & 0.43 $\pm$ 0.02 & 0.42 $\pm$ 0.02\\
         Unmodified & 0.23 $\pm$ 0.02 & 0.60 $\pm$ 0.03 & 0.66 $\pm$ 0.02\\
   \end{tabular}
- \caption{\label{tab:cortable}Water content effect on coefficient of restitution.}
 \end{table}
 
 What is more likely the cause of the increased COR is is a combination of water being consumed as zinc oxide forms as indicated by reactions 1 and 2.  What we will show in subsequent sections is that while water is consumed to form zinc oxide throughout the anode, the COR change appears to correlate with the point at which ZnO is present through the thickness of the the Zn gel anode.
@@ -108,7 +108,7 @@ One method for measuring the evolution of interfaces within a battery is electro
 
 \subsection{Comparison to EDXRD data}
 
-Recent studies have shown that performing \textit{in situ} EDXRD on batteries during discharge can probe the evolution of the internal components.~\cite{gallaway,haibel,manke} Using similar methods, \textit{in situ} EDXRD was performed in AA batteries at three discharge rates: 100 mA, 200 mA, and 300 mA. The x-ray beam was incident along the width of the battery, which allows for collection of spatially resolved data, providing a measure of the oxidation of Zn to ZnO at both edges of the anode: the separator and the current collector. In all three cells, we see that ZnO forms at the separator interface (Fig.~\ref{fig:znxrd}a,c,e) before forming at the current collector interface (Fig.~\ref{fig:znxrd}b,d,f). The capacity passed at which ZnO is present at each interface is detailed in Table~\ref{tab:znotable}.
+Recent studies have shown that performing \textit{in situ} EDXRD on batteries during discharge can probe the evolution of the internal components.~\cite{gallaway,haibel,Manke2007-yj} Using similar methods, \textit{in situ} EDXRD was performed in AA batteries at three discharge rates: 100 mA, 200 mA, and 300 mA. The x-ray beam was incident along the width of the battery, which allows for collection of spatially resolved data, providing a measure of the oxidation of Zn to ZnO at both edges of the anode: the separator and the current collector. In all three cells, we see that ZnO forms at the separator interface (Fig.~\ref{fig:znxrd}a,c,e) before forming at the current collector interface (Fig.~\ref{fig:znxrd}b,d,f). The capacity passed at which ZnO is present at each interface is detailed in Table~\ref{tab:znotable}.
 
 \begin{table}[htb]
 \centering
@@ -125,11 +125,8 @@ Recent studies have shown that performing \textit{in situ} EDXRD on batteries du
 
 
 These spectra confirm the results of Horn et al,~\cite{horn} who have shown that at higher discharge rates, ZnO will grow preferentially at the separator interface before growing through the anode towards the current collector. They have found that ZnO initially grows as a shell around the Zn particles (Type I ZnO) through solution-precipitation of {\ce{Zn(OH)^{2-}_{4}}. Once the particle is completely enveloped in Type I ZnO it begins to oxidize and deposit onto the the inside surface of the Type I ZnO shell via a second solution-precipitation step (Type II ZnO). Based on the EDXRD spectra in Fig.~\ref{fig:znxrd}, the oxidation of Zn in the cell ultimately forms a percolation network of ZnO from the separator to the current collector, and because of the axial symmetry of the cell, detection of radial percolation also suggest percolation throughout the entire cell. This agrees well with the results of Arise et al.,~\cite{arise} who have shown that following initial precipitation of ZnO onto the anode surface, the particles will coarsen and form dense films. It is also supported by the \textit{in situ} x-ray microtomography performed by Haibel et al.,~\cite{haibel}, who show that the growth front of ZnO in an alkaline cell travels from the separator to the current collecting pin as a function of depth of discharge.
-\begin{minipage}{\textwidth}
-\centering
-(\textit{Figure follows on next page.})
-\end{minipage}
-\clearpage
+
+\figskip{fig:znxrd}
 
 \begin{figure}[htb]
 \centering
@@ -144,17 +141,17 @@ Comparing the bounce test data presented in Fig.~\ref{fig:COR1to3} with the EDXR
 
 \begin{table}[htb]
 \centering
+  \caption{\label{tab:table3}Materials properties of electrode materials in an alkaline battery}
   \begin{tabular}{*{4}{l}}
     \hline
-    Material & Density (g/cm$^3$) & Bulk Modulus (GPa) & Reference\\
+    Material & Density (g/cm$^3$) & Bulk modulus (GPa) & Reference\\
     \hline
-        Zinc (Zn)& 7.05 & 72 & ~\cite{Kaye2014-am}\\
-        Zinc oxide (ZnO) & 5.06 & 134 & ~\cite{Munro2002-pg}\\
-        Zn gel & 3.64 (estimated) & 57.6 (estimated) & ~\cite{Kaye2014-am,Murei2007-ke}\\
+        Zinc (Zn)& 7.05 & 72.0 & ~\cite{Kaye2014-am}\\
+        Zinc oxide (ZnO) & 5.06 & 134.0 & ~\cite{Munro2002-pg}\\
+        Zn gel & 3.64 (est.) & 57.6 (est.) & ~\cite{Kaye2014-am,Murei2007-ke}\\
         Electrolytic (\ce{MnO2}) & 4.55 & 54.5 & ~\cite{Robert1990-zl,Tao2013-vg}\\
         Groutite (MnOOH) & 4.14 & 39.8 & ~\cite{Robert1990-zl,Tao2013-vg}\\
   \end{tabular}
-  \caption{\label{tab:table3}Materials properties of electrode materials in an alkaline battery}
 \end{table}
 
 
