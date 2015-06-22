@@ -1,6 +1,22 @@
 \section{Comparison of EAToF and EDXRD}
 \subsection{EAToF results}
-Four Duracell MN1500 AA alkaline cells were discharged at 143, 200, 300 and 400 mA while performing EAToF measurements. To show the time-evolution of the individual acoustic waveforms, we composited all measurements for each cell into a two-dimensional intensity map, plotting cycle time against ToF data. This allowed for ready visualization of the relative intensity of the ultrasonic signal as well as the shifts in ToF that occur during discharge. Figure~\ref{fig:alkbwrates} shows the resulting time-resolved transmitted acoustic signal intensity maps, the normalized total transmitted signal amplitude (TTSA), and the current and voltage profiles during discharge for each cell. Each cell was held at open circuit voltage for 10 minutes, then discharged at constant current to a cutoff voltage of 0.9 V.
+Four Duracell MN1500 AA alkaline cells were discharged at 143, 200, 300 and 400 mA while performing EAToF measurements. The discharge capacity at each rate is shown in Table~\ref{tab:captable}.
+
+\begin{table}[htb]
+\centering
+  \caption{\label{tab:captable}Alkaline AA battery discharge capacity at multiple discharge rates.}
+  \begin{tabular}[t]{*{2}{l}}
+    \hline
+       Discharge rate (mA) & \specialcell{Capacity (mAh)}\\
+    \hline
+        143 & 2496\\
+        200 & 2264\\
+        300 & 2012\\
+        400 & 1734\\
+  \end{tabular}
+\end{table}
+
+To show the time-evolution of the individual acoustic waveforms, we composited all measurements for each cell into a two-dimensional intensity map, plotting cycle time against ToF data. This allowed for ready visualization of the relative intensity of the ultrasonic signal as well as the shifts in ToF that occur during discharge. Figure~\ref{fig:alkbwrates} shows the resulting time-resolved transmitted acoustic signal intensity maps, the normalized total transmitted signal amplitude (TTSA), and the current and voltage profiles during discharge for each cell. Each cell was held at open circuit voltage for 10 minutes, then discharged at constant current to a cutoff voltage of 0.9 V.
 
 \begin{figure}[htb]
   \centering
@@ -37,20 +53,35 @@ A number of correlations are visible between the EDXRD maps and the position of 
 
 \section{Brand comparison}
 
-
-To determine the ability of EAToF to ascertain differences in the materials properties of multiple AA alkaline battery brands, EAToF measurements were performed during discharge at 143 mA and 400 mA on a combination of Duracell Quantum (Quantum), Duracell Coppertop (Coppertop), CVS Alkaline (CVS), and Fujitsu G+ (Fujitsu) alkaline AA batteries. A multiplexing circuit was used to run cells concurrently, which required additional amplification of the signal relative to the multiple discharge rate study. Cells were held at open circuit voltage for 15 minutes before discharge and discharged at constant current to a cutoff voltage of 0.9 V. Cells were then imaged using SEM \textit{post mortem} to visualize morphology changes that occurred during discharge. Table 2 shows the relevant discharge capacities of each cell at 143 mA and 400 mA discharge rates. The Quantum cell displayed the closest to nameplate capacity (2850 mAh), with the Fujitsu cell showing the lowest capacity, showing a rough correlation of capacity with battery price. Furthermore, the Fujitsu cell performed very poorly at high discharge rates, showing only 25\% of nominal capacity at 400 mA.
+Given the multitude of brands of alkaline AA batteries available to consumers, we wanted to determine the ability of EAToF to ascertain differences in the materials properties of multiple AA alkaline battery brands. To explore a range of batteries from most expensive to least expensive, we tested a combination of Duracell Quantum, Duracell Coppertop, CVS Alkaline, and Fujitsu G+ alkaline AA batteries. Cells were weighed as-received, then after cutting a 2 cm slit in the top of each cell. The cells were then desiccated for five days and weighed again. A sample of each battery’s Zn gel anode was also weighed as-received and again post-desiccation. As mentioned in Chapter~\ref{ch:pastwork}, alkaline AA batteries to weigh roughly 23.5 $\pm$ 0.5 g, but as shown in Table~\ref{tab:brandtable1}, the Quantum cell had a higher initial mass and a higher wet anode mass. This gives credence to Duracell's claims of a "Hi-Density Core" using "proprietary compression technology."\cite{duracell} The Quantum and Coppertop showed the same amount of moisture loss from the anode (within a margin of error), which was greater than that shown in the CVS and Fujitsu cells, implying improved hydration in the Quantum and Coppertop anodes. Furthermore, the Quantum and Coppertop showed an additional 0.3 g and 0.48 g of moisture loss from the entire cell, respectively, not including the 0.67 g of moisture lost from the anode, whereas the CVS and Fujitsu cells showed an additional 0.03 g and 0.02 g of additional moisture loss, respectively. This implies that the cathodes and separators in the Quantum and Coppertop cells are better hydrated. Better cell hydration would allow for greater electrolytic contact for all electrode components, and would manifest as a difference in capacity.
 
 \begin{table}[htb]
 \centering
-  \caption{\label{tab:brandtable}Alkaline AA battery discharge capacity by brand.}
-  \begin{tabular}{*{3}{l}}
+  \caption[Alkaline AA battery mass and moisture loss by brand.]{\label{tab:brandtable1}Alkaline AA battery mass and moisture loss by brand. Margin of error in mass is $\pm$0.1 g.}
+  \begin{tabular}[t]{*{5}{l}}
+    \hline
+       Brand & \specialcell{Cell mass (g)} & \specialcell{Total water\\content (g)} & \specialcell{Wet anode\\mass (g)} & \specialcell{Anode water\\content (g)}\\
+    \hline
+        Quantum   & 25.43 & 0.97 & 5.60 & 0.67\\
+        Coppertop & 23.35 & 1.15 & 4.88 & 0.67\\
+        CVS       & 23.21 & 0.46 & 4.71 & 0.43\\
+        Fujitsu   & 23.72 & 0.62 & 4.88 & 0.60\\
+  \end{tabular}
+\end{table}
+
+In addition to mass characterization, EAToF measurements were performed during discharge at 143 mA and 400 mA on all cells. A multiplexing circuit was used to run cells concurrently, which required additional amplification of the signal relative to the multiple discharge rate study. Cells were held at open circuit voltage for 15 minutes before discharge and discharged at constant current to a cutoff voltage of 0.9 V. Cells were then imaged using SEM \textit{post mortem} to visualize morphology changes that occurred during discharge. Table~\ref{tab:brandtable2} shows the relevant discharge capacities of each cell at 143 mA and 400 mA discharge rates. The Quantum cell displayed the closest to nameplate capacity (2850 mAh), with the Fujitsu cell showing the lowest capacity, showing a rough correlation of capacity with battery price. Furthermore, the Fujitsu cell performed very poorly at high discharge rates, showing only 25\% of nominal capacity at 400 mA. 
+
+\begin{table}[htb]
+\centering
+  \caption{\label{tab:brandtable2}Alkaline AA battery discharge capacity by brand.}
+  \begin{tabular}[t]{*{3}{l}}
     \hline
        Brand & \specialcell{Capacity at 143 mA\\(mAh)} & \specialcell{Capacity at 400 mA\\(mAh)}\\
     \hline
-        Quantum & 2456 & 1785 \\
+        Quantum   & 2456 & 1785\\
         Coppertop & 2311 & 1542\\
-        CVS & 2161 & 1452\\
-        Fujitsu & 2081 & 714\\
+        CVS       & 2161 & 1452\\
+        Fujitsu   & 2081 & 714\\
   \end{tabular}
 \end{table}
 
@@ -80,9 +111,9 @@ The \textit{post mortem} SEM analysis, shown in Fig.~\ref{fig:143sem}, shows tha
 
 \clearpage
 
-\subsection{EAToF and SEM analysis for cells discharged at 400 mA}
+\subsection{EAToF and SEM analysis of cells discharged at 400 mA}
 
-To further analyze how the cells performed under higher discharge rates, all brands were tested at 400 mAh. Figure~\ref{fig:brand400} shows the corresponding EAToF map, TTSA, and potential/current profile during discharge for each cell. This time, we see that the EAToF map for all cells shows an initial increase in intensity at the beginning of discharge, then some period of attenuation, followed by a final increase as the cell approaches the end of discharge. The Quantum cell displays strong signal intensity almost continuously. The Coppertop shows a similarly spaced peak profile to the Quantum, with much weaker signal in the middle of discharge. The CVS and Fujitsu cells both show a more widely spaced peak profile, with the end of discharge echoes clustered between 6 $\upmu$s and 12 $\upmu$s in the CVS cell, and a large number of low intensity echoes in the Fujitsu, the strongest clustered about 11 $\upmu$s, unlike the clustering of echoes between 8 $\upmu$s and 9 $\upmu$s in the other cells. 
+To further analyze how the cells performed under higher discharge rates, all brands were tested at 400 mAh. Figure~\ref{fig:brand400} shows the corresponding EAToF map, TTSA, and potential/current profile during discharge for each cell. This time, we see that the EAToF map for all cells shows an initial increase in intensity at the beginning of discharge, then some period of attenuation, followed by a final increase as the cell approaches the end of discharge. The Quantum cell displays strong signal intensity almost continuously. The Coppertop shows a similarly spaced peak profile to the Quantum with much weaker signal in the middle of discharge. The CVS and Fujitsu cells both show a more widely spaced peak profile with the end of discharge echoes clustered between 6 $\upmu$s and 12 $\upmu$s in the CVS cell, and a large number of low intensity echoes in the Fujitsu, the strongest clustered about 11 $\upmu$s, unlike the clustering of echoes between 8 $\upmu$s and 9 $\upmu$s in the other cells. 
 
 \begin{figure}[htb]
   \centering
@@ -109,11 +140,93 @@ As in the discharge rate study, we also tracked peak position between 7 $\upmu$s
 \begin{figure}[htb]
   \centering
     \includegraphics[width=\textwidth]{ch5-alkbw/images/BrandCompEAToF_PeakPos.png}
-    \caption[ToF peak shifts for multiple brands of alkaline AA batteries.]{ToF peak shifts for multiple brands of alkaline AA batteries discharged at \textbf{top)} 143 mA and \textbf{bottom)} 400 mA}
+    \caption[ToF peak shifts for multiple brands of alkaline AA batteries.]{ToF peak shifts for multiple brands of alkaline AA batteries discharged at \textbf{top)} 143 mA and \textbf{bottom)} 400 mA.}
     \label{fig:brandpeak}
 \end{figure}
 
 In a number of cells, we noticed a Nernstian-like shift in the ToF positions, similar to shifts in the cell potential with discharge. In both the 143 mA and 400 mA discharge cases, the Quantum cell showed a jump from 9.8 $\upmu$s to 10.4 $\upmu$s. They also showed similar endpoints at roughly 8.9 $\upmu$s. The cell discharged at 400 mA showed a faster decrease in ToF position, as to be expected given the earlier oxidation that would occur from a higher discharge current. The period of fluctuation from 475 mAh to 1020 mAh was between 9.3 $\upmu$s and 10.0 $\upmu$s, again supporting our finding that echoes within the anode were spaced 0.7 $\pm$ 0.1 $\upmu$s apart. The Coppertop showed fluctuation at both discharge rates. At 143 mA the cell showed smaller (0.75 $\upmu$s) fluctuations, but later in discharge (1500 mAh passed) showed greater fluctuations (1.5 $\upmu$s to 2.1 $\upmu$s) which we attribute to increased oxidation and dehydration of the anode, leading to the creation of more echo modes. At 400 mA the fluctuations (0.6 $\upmu$s to 0.8 $\upmu$s) occurred between 0 mAh and 525 mAh before leveling off, which is expected as at the higher discharge rate, the bulk of the densification occurs early in discharge. The CVS cells both showed almost no fluctuation, with the 143 mA cell showing small fluctuations (0.6 $\upmu$s) at the end of discharge, and the 400 mA cell showing a single large fluctuation (1.5 $\upmu$s) at the beginning of discharge. Based on the SEM micrographs presented in Fig. 7 and 9, we think this is likely due to the low porosity densification of the anode, as the KOH crystals may scatter echoes more than a Zn/ZnO structure would. The endpoints are again similar (9.1 $\pm$ 0.1 $\upmu$s). The Fujitsu cell shows some fluctuation on the order of 0.8 $\upmu$s and 1.6 $\upmu$s in the 143 mA case, but maintains a decreasing trend in ToF position when fluctuations are ignored. In the 400 mA case, there is one large fluctuation of 3.0 $\upmu$s after 155 mAh passed, after which the ToF settles at the higher value of 10.7 $\upmu$s and then decreases until it jumps 0.7 $\upmu$s after 715 mAh passed. Unlike the other cells, the endpoints were very different: 9.0 $\upmu$s for the 143 mA cell and 10.9 $\upmu$s for the 400 mA cell. Comparing to the SEM micrographs we see that in the 143 mA cell the fluctuations are likely due to the disjoint nature of the oxidized anode, as at different points of discharge there may be a variety of pathways available for the ultrasonic pulse to travel along, and in the 400 mA cell the large jump is likely due to starvation of electrolyte, as it appears that there are few if any well-connected densified pathways for the ultrasonic pulse to travel along. The differences in final ToF value may be a result of the vastly differing levels of densification.
 
-\subsection{Anode particle size comparison}
+\subsection{Anode particle size and morphology comparison}
+
+To further quantify differences in the material components of the four alkaline AA battery brands tested in this study, we removed a portion of the Zn anode particles and performed ex situ SEM analysis to determine particle size distributions. The SEM image is shown in Fig.~\ref{fig:znpart} and the particle size statistics are shown in Table~\ref{tab:zntable}.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{ch5-alkbw/images/Zn.png}
+    \caption[SEM micrographs of Zn anode particles from multiple brands of alkaline AA batteries.]{SEM micrographs of Zn anode particles from (a) Quantum, (b) Coppertop, (c) CVS, and (d) Fujtisu cell anodes. Scale bar = 250 $\upmu$m.}
+    \label{fig:znpart}
+\end{figure}
+
+\begin{table}[htb]
+\centering
+  \caption{\label{tab:zntable}Anode Zn particle size statistics by battery brand.}
+  \begin{tabular}[t]{*{5}{l}}
+    \hline
+       Brand & \specialcell{Minimum size\\($\upmu$m)} & \specialcell{Maximum size\\($\upmu$m)} & \specialcell{Average size\\($\upmu$m)} & \specialcell{Standard deviation\\($\upmu$m)}\\
+    \hline
+        Quantum & 57 & 320 & 166 & 90\\
+        Coppertop & 270 & 944 & 562 & 134\\
+        CVS & 138 & 385 & 282 & 72\\
+        Fujitsu & 107 & 1588 & 523 & 324\\
+  \end{tabular}
+\end{table}
+
+All Zn particles appeared to be formed via spray pyrolysis given the characteristic “dog bone” and “potato” shapes of the individual particles.~\cite{linden} However, the particle size distributions vary widely. In the representative sample imaged for each cell, the Quantum particles were the smallest, ranging from from 57 um to 320 um. The CVS particles showed similar size distributions, ranging from 138 um to 282 um, but with flatter, fatter particles that showed a lower aspect ratio. The Coppertop particles tended to be longer than the Quantum and CVS particles, but showed higher aspect ratios. The Fujitsu particles appeared to be of the lowest quality, with a large spread in particle size distribution and some very large particles. As smaller particles would allow for more dense packing, it is expected that the Quantum would show the highest capacity and a stronger initial signal as shown in the ToF maps in Figs.~\ref{fig:brand143} and~\ref{fig:brand400}. Furthermore, smaller particles also have a higher surface to volume ratio, allowing for greater discharge capacity. 
+
+The morphologies of the Zn anode gels also varied from cell to cell. The two Duracell cells (Quantum and Coppertop) displayed a paste-like consistency of the anode gels, which flowed and sheared easily. Conversely, the CVS and Fujitsu anode gels were stiffer and gummier, resisting deformation relative to the Duracell cells. We posit that this difference comes from the difference in gelling agents used in the electrolyte of each cell. The Fujitsu cell, in particular, was the most putty-like, which would provide an additional explanation for the stronger transmitted signal earlier in discharge as shown in Figs.~\ref{fig:brand143} and~\ref{fig:brand400}.
+
 \subsection{Separator comparison}
+
+During cell deconstruction, it was noted that the separators varied in thickness and qualitative feel from brand to brand. As such, we desiccated a portion of each separator and measured the thickness, then performed SEM analysis (Fig.~\ref{fig:seps}) to determine the fiber size distributions. 
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.8\textwidth]{ch5-alkbw/images/Seps.png}
+    \caption[SEM micrographs of separators from multiple brands of alkaline AA batteries.]{SEM micrographs of separators from (a) Quantum, (b) Coppertop, (c) CVS, and (d) Fujtisu cells. Scale bar = 250 $\upmu$m.}
+    \label{fig:seps}
+\end{figure}
+
+\begin{table}[htb]
+\centering
+  \caption{\label{tab:septable1}Separator fiber size statistics by battery brand.}
+  \begin{tabular}[t]{*{5}{l}}
+    \hline
+       Brand & \specialcell{Minimum size\\($\upmu$m)} & \specialcell{Maximum size\\($\upmu$m)} & \specialcell{Average size\\($\upmu$m)} & \specialcell{Standard deviation\\($\upmu$m)}\\
+    \hline
+        Quantum   & 9.3 & 21.2 & 16.3 & 2.6\\
+        Coppertop & 9.6 & 22.1 & 15.9 & 3.3\\
+        CVS       & 8.3 & 15.0 & 11.3 & 1.6\\
+        Fujitsu   & 7.8 & 13.5 & 10.6 & 1.6\\
+  \end{tabular}
+\end{table}
+
+The SEM micrographs in Fig.~\ref{fig:seps} and the data in Table~\ref{tab:septable1} show that the Quantum and Coppertop separators were more robust at the microscale, with larger diameter fibers relative to the CVS and Fujitsu separators. It is of note that despite the increased fiber size, the Quantum and Coppertop separators had smoother textures than the CVS and Fujitsu separators. The two Duracell brand separators both had a smooth texture and were 80 um in thickness, while the CVS and Fujitsu separators appeared fibrous at 110 um and 120 um respectively, as detailed in Table~\ref{tab:septable2}.
+
+\begin{table}[htb]
+\centering
+  \caption{\label{tab:septable2}Separator thickness and texture by battery brand.}
+  \begin{tabular}[t]{*{3}{l}}
+    \hline
+       Brand & \specialcell{Thickness ($\upmu$m)} & Texture \\
+    \hline
+        Quantum   & 80  & smooth\\
+        Coppertop & 80  & smooth\\
+        CVS       & 110 & fibrous\\
+        Fujitsu   & 120 & fibrous\\
+  \end{tabular}
+\end{table}
+
+The construction of the separators varied from cell to cell. The Quantum contained two thin rectangular sleeves that were folded in half and rotated 90~\degree from each other as demonstrated in Fig.~\ref{fig:sepassembly}a,~\cite{Anglin2010-cj} while the CVS and Fujitsu cells had single-piece separator sleeves as demonstrated in Fig.~\ref{fig:sepassembly}b.~\cite{fujitsu} The Coppertop also contained a thin cellophane sleeve around the separator encased anode. The thickness of the separator could contribute to increased cell impedance, and hence the lower capacities of the CVS and Fujitsu cells. Beyond this conclusion, however, we are unable to draw any strong correlations to the EAToF measurements performed on these cells.
+
+\begin{figure}[htb]
+  \centering
+    \includegraphics[width=0.7\textwidth]{ch5-alkbw/images/SepAssembly.png}
+    \caption[Two separator configurations in alkaline AA batteries.]{Separator configurations for \textbf{a)} Quantum and Coppertop batteries and \textbf{b)} CVS and Fujitsu batteries.}
+    \label{fig:sepassembly}
+\end{figure}
+
+
+
+
+
+

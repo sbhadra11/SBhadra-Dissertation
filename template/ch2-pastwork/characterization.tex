@@ -1,0 +1,42 @@
+\section{Characterization techniques}
+\label{sec:pastwork:characterization}
+
+Battery research has resulted in the development of a number of characterization techniques. These techniques in \textit{ex situ} methods that must be performed when the battery is not in use and \textit{in situ} or \textit{in operando} methods that can be implemented while a battery is discharging. We can group the techniques into three categories: electrical, mechanical, and imaging.  
+
+\subsection{Electrical characterization techniques}
+
+Generally in operando
+
+Voltage measurements
+
+Coulomb counting
+
+Impedance spectroscopy - also gives SOH to an extent
+
+Electrical characterization methods are generally applicable \textit{in situ} as the measurement circuits can often be connected to the same circuit to which the battery is providing power, though the use of these techniques often requires interruption of operation. Most of these methods are performed to estimate SOC. At the most basic level measuring the voltage of a cell will give some degree of information, though as discussed earlier, the utility and bandwidth of such a measurement depends heavily on the amount of slope in the discharge curve. A flat discharge curve will provide almost no information about the cell's SOC or SOH through voltage measurements.
+
+A slightly higher level technique involves "Coulomb counting," in which the amount of charge passed to or from the cell is monitored.~\cite{Piller2001-xs} This technique gives a much more accurate measure of the SOC than voltage measurements, as it gives a direct measure of the capacity used. Coulomb counting only works, however, if the cell's initial capacity is known, and cannot provide information about the SOH as a cell's available total capacity is only obtained after full discharge. This technique is time intensive and requires active discharge of the battery, making it non-ideal for characterization.
+
+A more robust technique that has become popular in the last three decades involves performing electrochemical impedance spectroscopy (EIS) on a battery by applying a small-amplitude oscillatory excitation signal in either the voltage or the current and then measuring oscillatory response in the other quantity.~\cite{Huet_undated-ik} By measuring the phase angle and the real and imaginary parts of the complex impedance, information about a battery's kinetics and mass transport. These measurements can be correlated to SOC, and deviations from this initial correlation can be used to estimate changes in SOH. Ultimately, the technique requires specialized equipment that interrupts the operation of a cell if the equipment has not been previously installed.  
+
+\subsection{Mechanical characterization techniques}
+
+Often require fancy equipment
+
+Static stress
+
+Acoustic emission
+
+While electrical characterization methods look to correlate SOC and SOH to electrical quantities like voltage and impedance, mechanical characterization methods take a more direct approach by measuring the materials properties of the battery itself. Unfortunately, given this direct approach, mechanical methods often require specialized equipment that is difficult to implement \textit{in situ} and often impossible to implement \textit{in operando}. Despite this, the data from such studies still help to paint a more complete picture of battery materials.
+
+One of the most popular methods of mechanical characterization involves the measurement of static stress and strain during charge and discharge of batteries. These tests have measured how stress evolves from the component level,~\cite{cannarella_ion,peabody_separator, chen,du_cycling,han,park,striebel} all the way up to the entire cell.~\cite{cannarella_stress,Fu2013-yr,Oh2014-pc} The majority of these studies have focused on the lithium-ion battery due to the tendency of the cell to swell during cycling as a result of Li intercalation.
+
+Work has also been done using acoustics to measure the changes in an electrode's integrity during cycling.~\cite{Kircheva2011-ji, Komagata2010-sw, etiemble, Didier-Laurent2008-tt} This measure of acoustic emission offers an understanding of how individual electrode particles change morphologically, but the dependence on high powered acoustic receivers makes the technique all but impossible to implement \textit{in operando} as the integration of such receivers into a battery's packaging is far from a trivial task. 
+
+\subsection{Imaging}
+
+Optical
+Neutron tomography
+X-rays
+
+
